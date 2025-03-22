@@ -1,11 +1,22 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+// Define the contact form data type
+export interface ContactFormData {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  website: string;
+  message: string;
+  date: string;
+}
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -26,6 +37,22 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    
+    // Create a submission with an ID and timestamp
+    const submission: ContactFormData = {
+      id: Date.now().toString(),
+      ...formData,
+      date: new Date().toISOString(),
+    };
+    
+    // Get existing submissions from localStorage
+    const existingSubmissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+    
+    // Add new submission to array
+    const updatedSubmissions = [...existingSubmissions, submission];
+    
+    // Save updated array to localStorage
+    localStorage.setItem('contactSubmissions', JSON.stringify(updatedSubmissions));
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
