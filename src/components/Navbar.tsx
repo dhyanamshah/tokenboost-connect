@@ -36,9 +36,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-crypto-blue flex items-center justify-center">
-            <span className="text-white font-bold text-lg">τ</span>
+            <span className="text-white font-bold text-lg">c</span>
           </div>
-          <span className="font-bold text-xl text-crypto-dark">TokenBoost</span>
+          <span className="font-bold text-xl text-crypto-dark">CoinLinc</span>
         </a>
 
         {/* Desktop Navigation */}

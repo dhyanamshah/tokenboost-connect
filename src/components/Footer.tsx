@@ -11,9 +11,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-crypto-blue flex items-center justify-center">
-                <span className="text-white font-bold text-lg">τ</span>
+                <span className="text-white font-bold text-lg">c</span>
               </div>
-              <span className="font-bold text-xl text-white">TokenBoost</span>
+              <span className="font-bold text-xl text-white">CoinLinc</span>
             </div>
             
             <p className="text-white/70 mb-6">
@@ -75,7 +75,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
-            © {currentYear} TokenBoost. All rights reserved.
+            © {currentYear} CoinLinc. All rights reserved.
           </p>
           
           <div className="flex gap-6">
