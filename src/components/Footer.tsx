@@ -11,7 +11,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-crypto-blue flex items-center justify-center">
-                <span className="text-white font-bold text-lg">c</span>
+                <img 
+                  src="/lovable-uploads/591e3935-b932-4629-93ce-793f8ccfc456.png" 
+                  alt="Phi symbol" 
+                  className="w-4 h-4 invert"
+                />
               </div>
               <span className="font-bold text-xl text-white">CoinLinc</span>
             </div>
